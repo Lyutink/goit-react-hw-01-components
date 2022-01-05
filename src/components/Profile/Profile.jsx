@@ -1,31 +1,37 @@
-export const Profile = (user) => {
+import PropTypes from "prop-types";
+
+export default function Profile({ avatar, username, tag, location, stats }) {
   return (
-    <div class="profile">
-      <div class="description">
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
-          alt="User avatar"
-          class="avatar"
-        />
-        <p class="name">{user.username}</p>
-        <p class="tag">{user.tag}</p>
-        <p class="location">{user.location}</p>
+    <div>
+      <div>
+        <img src={avatar} alt="User avatar" />
+        <p>{username}</p>
+        <p>{tag}</p>
+        <p>{location}</p>
       </div>
 
-      <ul class="stats">
+      <ul>
         <li>
-          <span class="label">Followers</span>
-          <span class="quantity">1000</span>
+          <span>Followers</span>
+          <span>{stats.followers}</span>
         </li>
         <li>
-          <span class="label">Views</span>
-          <span class="quantity">2000</span>
+          <span>Views</span>
+          <span>{stats.views}</span>
         </li>
         <li>
-          <span class="label">Likes</span>
-          <span class="quantity">3000</span>
+          <span>Likes</span>
+          <span>{stats.likes}</span>
         </li>
       </ul>
     </div>
   );
+}
+
+Profile.propTypes = {
+  avatar: PropTypes.string,
+  username: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  stats: PropTypes.object,
 };

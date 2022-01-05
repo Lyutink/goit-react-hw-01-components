@@ -1,3 +1,9 @@
-export const TransactionHistory = () => {
+// export const TransactionHistory = () => {
+//   return;
+// };
+
+const TransactionHistory = () => {
   return;
 };
+
+export default TransactionHistory;
