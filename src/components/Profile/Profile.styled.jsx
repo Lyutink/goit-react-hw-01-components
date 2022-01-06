@@ -88,27 +88,3 @@ export {
   Label,
   Quantity,
 };
-// const StatName = styled.span`
-//   font-size: 1.5rem;
-//   color: ${({ theme }) => theme.colors.mainColor};
-//   font-weight: 400;
-// `;
-
-// const StatValue = styled.span`
-//   font-size: 1.5rem;
-//   color: ${({ theme }) => theme.colors.mainColor};
-//   font-weight: 500;
-// `;
-
-// export {
-//   ProfileWrapper,
-//   ProfileDescr,
-//   ProfileAvatar,
-//   ProfileName,
-//   ProfileNickName,
-//   ProfileLocation,
-//   StatsList,
-//   StatsItem,
-//   StatName,
-//   StatValue,
-// };
