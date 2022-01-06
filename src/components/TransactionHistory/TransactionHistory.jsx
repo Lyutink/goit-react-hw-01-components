@@ -1,9 +1,23 @@
-// export const TransactionHistory = () => {
-//   return;
-// };
+export default function TransactionHistory({ items }) {
+  return (
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Amount</th>
+          <th>Currency</th>
+        </tr>
+      </thead>
 
-const TransactionHistory = () => {
-  return;
-};
-
-export default TransactionHistory;
+      <tbody>
+        {items.map((item) => (
+          <tr key={item.id}>
+            <td>{item.type}</td>
+            <td>{item.amount}</td>
+            <td>{item.currency}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+}
