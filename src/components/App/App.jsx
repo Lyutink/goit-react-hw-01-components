@@ -1,4 +1,4 @@
-//import Container from './App.styled';
+import Container from "./App.styled";
 
 import Profile from "components/Profile/Profile";
 import Statistics from "components/Statistics/Statistics";
@@ -12,20 +12,20 @@ import transactions from "../../data/transactions.json";
 
 export default function App() {
   return (
-    //<Container>
-    <>
-      <Profile
-        username={user.username}
-        tag={user.tag}
-        location={user.location}
-        avatar={user.avatar}
-        stats={user.stats}
-      />
-      <h1>Задание 2</h1>
-      <Statistics title="Upload stats" stats={data} />
-      <FriendList friends={friends} />
-      <TransactionHistory items={transactions} />
-    </>
-    //</Container>
+    <Container>
+      <>
+        <Profile
+          username={user.username}
+          tag={user.tag}
+          location={user.location}
+          avatar={user.avatar}
+          stats={user.stats}
+        />
+        <h1>Задание 2</h1>
+        <Statistics title="Upload stats" stats={data} />
+        <FriendList friends={friends} />
+        <TransactionHistory items={transactions} />
+      </>
+    </Container>
   );
 }
