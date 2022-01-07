@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-//import StaticsList from './StaticsList';
+
 import {
   StatisticsSection,
   Title,
