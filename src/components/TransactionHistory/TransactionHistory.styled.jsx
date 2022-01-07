@@ -1,58 +1,66 @@
-import styled from "@emotion/styled";
+import styled from "styled-components";
+
+const TransactionHistoryWrapper = styled.div`
+  margin-top: 24px;
+  min-width: 320px;
+  border-radius: 12px;
+  border: 1px solid rgb(0 0 0/ 0.5);
+  background-color: white;
+  box-shadow: 5px 5px 20px 2px rgb(0 0 0/ 0.5);
+`;
 
 const TransactionHistoryTable = styled.table`
-  margin-top: 24px;
   width: 100%;
-
-  font-size: 1.2rem;
-  font-weight: 500;
-  border: 1px solid rgb(0 0 0/ 0.5);
-  box-shadow: 5px 5px 20px 2px rgb(0 0 0/ 0.5);
-  background-color: white;
+  border-collapse: collapse;
+  font-size: 1.5rem;
 `;
 
 const TransactionHead = styled.thead`
+  border-bottom: 1px solid rgb(0 0 0/ 0.5);
   background-color: #76bdff;
 `;
 
 const TransactionHeadTr = styled.tr`
-  margin: 0;
-  padding: 0;
   text-transform: uppercase;
   color: white;
 `;
 
-const TransactionHeadTh = styled.th`
-  margin: 0;
-  padding: 16px;
-  width: 33%;
+const TransactionHeadThType = styled.th`
+  border-top-left-radius: 12px;
+  padding: 8px;
+`;
+const TransactionHeadThCurrency = styled.th`
+  border-top-right-radius: 12px;
+  padding: 8px;
 `;
 
-const TransactionBody = styled.body``;
-
 const TransactionBodyTr = styled.tr`
-  margin: 0;
-  padding: 8px;
-
+  text-align: center;
+  color: gray;
   font-weight: 500;
-  :not(:last-child) {
-    border-bottom: 1px dashed gray;
+  :nth-of-type(2n) {
+    background-color: #dddada;
   }
 `;
 
-const TransactionBodyTd = styled.td`
-  width: 100%;
+const TransactionBodyTdType = styled.td`
   padding: 8px;
-  width: 33%;
-  text-align: center;
+  border-bottom-left-radius: 12px;
+`;
+
+const TransactionBodyTdCurrency = styled.td`
+  padding: 8px;
+  border-bottom-right-radius: 12px;
 `;
 
 export {
+  TransactionHistoryWrapper,
   TransactionHistoryTable,
   TransactionHead,
   TransactionHeadTr,
-  TransactionHeadTh,
-  TransactionBody,
+  TransactionHeadThType,
+  TransactionHeadThCurrency,
   TransactionBodyTr,
-  TransactionBodyTd,
+  TransactionBodyTdType,
+  TransactionBodyTdCurrency,
 };

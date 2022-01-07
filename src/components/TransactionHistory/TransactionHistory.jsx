@@ -1,36 +1,42 @@
 import PropTypes from "prop-types";
 
 import {
+  TransactionHistoryWrapper,
   TransactionHistoryTable,
   TransactionHead,
   TransactionHeadTr,
-  TransactionHeadTh,
-  TransactionBody,
+  TransactionHeadThType,
+  TransactionHeadThCurrency,
   TransactionBodyTr,
-  TransactionBodyTd,
+  TransactionBodyTdType,
+  TransactionBodyTdCurrency,
 } from "./TransactionHistory.styled";
 
 export default function TransactionHistory({ items }) {
   return (
-    <TransactionHistoryTable>
-      <TransactionHead>
-        <TransactionHeadTr>
-          <TransactionHeadTh>Type</TransactionHeadTh>
-          <TransactionHeadTh>Amount</TransactionHeadTh>
-          <TransactionHeadTh>Currency</TransactionHeadTh>
-        </TransactionHeadTr>
-      </TransactionHead>
+    <TransactionHistoryWrapper>
+      <TransactionHistoryTable>
+        <TransactionHead>
+          <TransactionHeadTr>
+            <TransactionHeadThType>Type</TransactionHeadThType>
+            <th>Amount</th>
+            <TransactionHeadThCurrency>Currency</TransactionHeadThCurrency>
+          </TransactionHeadTr>
+        </TransactionHead>
 
-      <TransactionBody>
-        {items.map((item) => (
-          <TransactionBodyTr key={item.id}>
-            <TransactionBodyTd>{item.type}</TransactionBodyTd>
-            <TransactionBodyTd>{item.amount}</TransactionBodyTd>
-            <TransactionBodyTd>{item.currency}</TransactionBodyTd>
-          </TransactionBodyTr>
-        ))}
-      </TransactionBody>
-    </TransactionHistoryTable>
+        <tbody>
+          {items.map((item) => (
+            <TransactionBodyTr key={item.id}>
+              <TransactionBodyTdType>{item.type}</TransactionBodyTdType>
+              <td>{item.amount}</td>
+              <TransactionBodyTdCurrency>
+                {item.currency}
+              </TransactionBodyTdCurrency>
+            </TransactionBodyTr>
+          ))}
+        </tbody>
+      </TransactionHistoryTable>
+    </TransactionHistoryWrapper>
   );
 }
 

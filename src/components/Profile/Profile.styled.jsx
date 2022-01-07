@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from "styled-components";
 
 const ProfileCard = styled.div`
   max-width: 320px;

@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from "styled-components";
 
 const FriendCard = styled.ul`
   margin: 24px 0 0 0;
