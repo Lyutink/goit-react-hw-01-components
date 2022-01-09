@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import RandomColor from "./RandomColor";
 
 const StatisticsSection = styled.section`
   max-width: 320px;
@@ -26,7 +27,6 @@ const StatList = styled.ul`
   padding: 0;
   list-style: none;
   display: flex;
-  //flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #b0c8f5;
@@ -41,6 +41,13 @@ const StatListItem = styled.li`
   width: 100%;
   font-size: 1.2rem;
   font-weight: 400;
+  background-color: ${RandomColor};
+  :nth-child(1) {
+    border-bottom-left-radius: 12px;
+  }
+  :nth-last-child(1) {
+    border-bottom-right-radius: 12px;
+  }
 `;
 
 const Label = styled.span`
